@@ -14,6 +14,7 @@ EXPERIENCE_CHOICES = (
 
 # Creando los modelos de la base de datos
 class Perfil(models.Model):
+    autor = models.CharField('Autor', max_length = 64, blank=False, null=False)
     nombre = models.CharField('Nombre', max_length = 64, blank=False, null=False)
     direccion = models.CharField('Dirección', max_length=128, blank=False, null=False)
     telefono = models.CharField('Teléfono', max_length=32, blank=False, null=False)
