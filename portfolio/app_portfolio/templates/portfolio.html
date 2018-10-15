@@ -36,13 +36,13 @@
 
 <!-- Section - Home Start -->
 <section id="home" class="home-bg-static bg-cover bg-gray-dark bg-overlay-black-5 w-100">
-    <div class="container h-50">
-        <div class="row container-fluid text-sm-center text-md-left">
+    <div class="container h-100">
+        <div class="row align-items-center h-50 justify-content-center">
             <div class="col-15 outset-md-9 d-none d-sm-block">
-                <img src="{% static 'assets/images/Kinetia_InPixio.png' %}" alt="Kinetia" class="img-fluid kinetia-logo">
+                <img src="{% static 'assets/images/kinetia_logo_oepm.jpg' %}" alt="Kinetia" class="img-fluid kinetia-logo">
             </div>
         </div>
-        <div class="row align-items-center h-100 justify-content-center">
+        <div class="row align-items-center h-50 justify-content-center">
             <div class="col-lg-9 text-center">
                 <h2 class="font-alt font-w-600 letter-spacing-2 m-0 mt-3 opacity-9-5 text-white title-sm-extra-large title-extra-large-2">{{ perfil.autor }}</h2>
                 <span class="d-block font-alt mt-1 opacity-9-5 text-white title-sm-medium title-large">{{ perfil.puesto }}</span>
@@ -111,10 +111,12 @@
         <div class="row">
             <div class="col-lg-8">
                 <div class="pr-lg-4">
-                    <h3 class="font-alt font-w-600 letter-spacing-2 title-large text-white">{{ perfil.nombre }}</h3>
-                    <p class="mt-4 text-large text-white">{{ perfil.nombre|title }}, tengo {{ perfil.edad }} años de edad, nací y crecí en Madrid, España. Desarrollador creativo altamente motivado con cartera de clientes internacionales.</p>
+                    <h3 class="font-alt font-w-600 letter-spacing-2 title-large text-white">Sobre {{ perfil.nombre }}</h3>
+                    <p class="mt-4 text-large text-white">{{ perfil.nombre }} es una empresa fundada en Zurich por {{ perfil.autor|title }}, con la vocación de poner más de 15 anios de experiencia en la investigación de problemas de Ruido y Vibración al servicio de la Industria y el sector del Transporte.</p>
                     <span class="bg-base-color mt-4 sep-line-medium-thick"></span>
-                    <p class="mt-4 text-gray text-large">Actualmente trabajo en Galley-La Company, donde paso la mayor parte de mi tiempo creando y trabajando en proyectos increíbles.</p>
+                    <p class="mt-4 text-gray text-large">Francisco S Climent es Ingeniero Industrial (Mecánica). Comienza su carrera en TSI (Técnicas y Sevicios de Ingeniería) en Madrid como Ingeniero de Cálculo y Ensayos dinámicos. Posteriormente en el departamento de pre y post venta del Grupo Álava Ingenieros adquiere una sólida formación en sistemas de adquisición y procesamiento de seniales
+                                                         Posteriormente trabaja en el Centro Técnico de Nissan Europa con Ingeniero de Ensayos de Ruido y Vibración en el departamento de Powertrain Diesel. Finaliza la etapa en Nissan como Ingeniero Senior gestionando el desarrollo de diferentes proyectos desde la perspectiva de Ruido y Vibración. En el anio 2010 vuelve al secor inductrial trabjando en Preditec 
+                                                         como Ingeniero de Cálculo y Ensayos participando en la resolución de alrededor de 140 casos. Actualmente colaboro con Autoneum como Proyect Manager para el desarrollo de la acústica de vehículos o el desarollo de sistemas de caracterización de materiales o tratamientos acústicos.</p>
                     <p class="mt-3 text-gray text-large">Lorem ipsum dolor sit amet, consectetuer adipiscing elit is simply dummy text of the printing and typesetting industry. Lorem ipsum dolor sit amet, consectetuer adipiscing is simply dummy text of the printing and typesetting industry ever since the 1500s.</p>
 
                     <div class="row pt-5">
