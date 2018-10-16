@@ -4,7 +4,7 @@
 <html lang="en">
 
 <head>
-    <title>RESUMEN</title>
+    <title>KINETIA</title>
     <meta name="description" content=""/>
     <meta name="keywords" content=""/>
     <meta charset="utf-8">
@@ -40,7 +40,7 @@
         <div class="row align-items-center h-50 justify-content-center">
             <div class="col-lg-15 outset-md-9 d-none d-sm-block">
                 {% if is_mobile %}    
-                    <img src="{% static 'assets/images/kinetia_logo_oepm.png' %}" alt="Kinetia" class="img-fluid kinetia-logo">
+                    <img src="{% static 'assets/images/kinetia_logo_oepm.jpg' %}" alt="Kinetia" class="img-fluid kinetia-logo">
                 {% else %}
                     <img src="{% static 'assets/images/Kinetia_InPixio_grande_dif.png' %}" alt="Kinetia" class="img-fluid kinetia-logo">
                 {% endif %}
@@ -48,11 +48,11 @@
             </div>
         </div>
         <div class="row align-items-center h-50 justify-content-center">
-            <div class="col-lg-9 text-center">
+            <div class="col-lg-15 text-center">
                 <h2 class="font-alt font-w-600 letter-spacing-2 m-0 mt-3 opacity-9-5 text-white title-sm-extra-large title-extra-large-2">{{ perfil.autor }}</h2>
                 <span class="d-block font-alt mt-1 opacity-9-5 text-white title-sm-medium title-large">{{ perfil.puesto }}</span>
                 <span class="d-block font-alt mb-1 mt-2 opacity-9-5 text-white text-extra-large">Técnicas Avanzadas y Experiencia Aplicadas</span>
-                <a href="#profile" class="page-scroll btn box-shadow-wide btn-base-color btn-large m-0 mt-4">Servicios de Ingeniería</a>
+                <a href="#services" class="page-scroll btn box-shadow-wide btn-base-color btn-large m-0 mt-4">Servicios de Ingeniería</a>
             </div>
             <!-- //.col-lg-9 -->
         </div>
@@ -116,13 +116,15 @@
         <div class="row">
             <div class="col-lg-8">
                 <div class="pr-lg-4">
-                    <h3 class="font-alt font-w-600 letter-spacing-2 title-large text-white">Sobre {{ perfil.nombre }}</h3>
+                    <h3 class="font-alt font-w-600 letter-spacing-2 title-large text-white">Sobre {{ perfil.autor }}</h3>
                     <p class="mt-4 text-large text-white">{{ perfil.nombre }} es una empresa fundada en Zurich por {{ perfil.autor|title }}, con la vocación de poner más de 15 anios de experiencia en la investigación de problemas de Ruido y Vibración al servicio de la Industria y el sector del Transporte.</p>
                     <span class="bg-base-color mt-4 sep-line-medium-thick"></span>
-                    <p class="mt-4 text-gray text-large">Francisco S Climent es Ingeniero Industrial (Mecánica). Comienza su carrera en TSI (Técnicas y Sevicios de Ingeniería) en Madrid como Ingeniero de Cálculo y Ensayos dinámicos. Posteriormente en el departamento de pre y post venta del Grupo Álava Ingenieros adquiere una sólida formación en sistemas de adquisición y procesamiento de seniales
-                                                         Posteriormente trabaja en el Centro Técnico de Nissan Europa con Ingeniero de Ensayos de Ruido y Vibración en el departamento de Powertrain Diesel. Finaliza la etapa en Nissan como Ingeniero Senior gestionando el desarrollo de diferentes proyectos desde la perspectiva de Ruido y Vibración. En el anio 2010 vuelve al secor inductrial trabjando en Preditec 
-                                                         como Ingeniero de Cálculo y Ensayos participando en la resolución de alrededor de 140 casos. Actualmente colaboro con Autoneum como Proyect Manager para el desarrollo de la acústica de vehículos o el desarollo de sistemas de caracterización de materiales o tratamientos acústicos.</p>
-                    <p class="mt-3 text-gray text-large">Lorem ipsum dolor sit amet, consectetuer adipiscing elit is simply dummy text of the printing and typesetting industry. Lorem ipsum dolor sit amet, consectetuer adipiscing is simply dummy text of the printing and typesetting industry ever since the 1500s.</p>
+                    <p class="mt-4 text-gray text-large">De titulación Ingeniero Industrial (Mecánica). Comienzo mi carrera en TSI (Técnicas y Sevicios de Ingeniería) en Madrid como Ingeniero de Cálculo y Ensayos dinámicos. Seguidamente en la división de Sistemas del Grupo Álava Ingenieros adquiero una sólida formación en sistemas de adquisición y procesamiento de seniales, así como en metodologías para en análisis de fenómenos dinámicos. 
+Comienzo después de una nueva etapa en el Centro Técnico de Nissan Europa con Ingeniero de Ensayos de Ruido y Vibración en el departamento de Powertrain Diesel. Tras un periodo de dos anios adquiero el rol de Ingeniero Senior participando en el desarrollo de diferentes proyectos en conjunto con NTCE(UK) y RENAULT. 
+En el anio 2010 vuelvo al sector industrial de la mano de Preditec como Ingeniero de Cálculo y Ensayos dinámicos participando en la resolución de alrededor de 140 casos que me perimitieron abarcar multitud de disciplinas (registro, análisis modal, medida de vibración torsional, ODS) en ámbitos muy diferentes, y conjugando Metodologías Experimentales y Modelos Numéricos para garantizar el éxito de las intervenciones.
+Tras casi 6 anios realmente satisfactorios en Preditec, comienzo en Autoneum como Ingeniero de Simulación realizano modelos numéricos de materiales acústicos basados principalmente en las ecuaciones de Biot y el Método de Transformación de Matrices (TMM).
+Actualmente colaboro con Autoneum como supervisor de proyectos de disenio del paquete acústico de vehículos y el desarollo de sistemas de caracterización de materiales o tratamientos acústicos.</p>
+                    <p class="mt-3 text-gray text-large"><b>KINETIA es la culminación de más de 15 anios de Aprendizaje y Experiencia puestos al servicio del Cliente.</b></p>
 
                     <div class="row pt-5">
                         <div class="col-md-6">
