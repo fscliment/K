@@ -40,3 +40,19 @@ def portfolio(request):
         )
 
     return render(request, 'portfolio.html', contexto)
+
+def checkDevice(request):
+    
+    """Función para identificar el dispositivo y configurar vistas"""
+    
+    
+    if request.mobile:
+        is_mobile = True
+    else:
+        is_mobile = False
+
+    context = {
+        
+        'is_mobile': is_mobile,
+    }
+    return render(request, 'mytemplate.html', context)
