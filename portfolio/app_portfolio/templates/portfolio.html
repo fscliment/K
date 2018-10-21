@@ -263,8 +263,8 @@ Actualmente colaboro con Autoneum como supervisor de proyectos de disenio del pa
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center">
-                    <h3 class="font-alt font-w-600 letter-spacing-2 title-large text-white">Metodología y Técnicas</h3>
-                    <p class="mt-3 text-gray text-extra-large"><i style="font-style: inherit">Un ganador es alguien que reconoce los talentos que Dios le ha dado, trabaja a fondo para desarrollarlos en habilidades y usa estas habilidades para lograr sus objetivos.</i></p>
+                    <h3 class="font-alt font-w-600 letter-spacing-2 title-large text-white font-weight-bold">Metodología y Técnicas</h3>
+                    <p class="mt-3 text-gray text-extra-large"><i style="font-style: inherit">Somos expertos en las siguientes metodologías:</i></p>
                     <span class="bg-base-color mt-4 mx-auto sep-line-medium-thick-long"></span>
                 </div>
                 <!-- //.col-lg-8 -->
@@ -274,17 +274,15 @@ Actualmente colaboro con Autoneum como supervisor de proyectos de disenio del pa
             <div class="row justify-content-center mt-5 pt-lg-5">
                 {% for habilidad in habilidades %}
                     <div class="col-sm-6 col-md-4 col-lg-2 text-center py-3 py-lg-0">
-                        <div class="chart-circle">
-                            <div class="chart">
-                                <span class="item-progress" data-percent="{{ habilidad.porcentaje }}"></span>
-                            </div>
-                            <!-- //.chart -->
+                        
+                        <img src={% static 'assets/images/favi_small.jpg' %} class="rounded-circle" alt="Metodología" class="img-fluid kinetia-logo"> 
+                       
+                                
+                           
+                            <!-- //img -->
 
-                            <span class="percent bg-base-color box-shadow-wide font-alt font-w-600 rounded text-small text-white">{{ habilidad.porcentaje }}%</span>
-                        </div>
-                        <!-- //.chart-circle -->
 
-                        <span class="d-block font-alt letter-spacing-1 mt-3 text-extra-large text-white">{{ habilidad.nombre }}</span>
+                        <span class="d-block font-alt letter-spacing-1 mt-3 text-extra-large text-white font-weight-bold">{{ habilidad.nombre }}<span>
                     </div>
                     <!-- //.col-lg-2 -->
                 {% endfor %}
@@ -386,8 +384,8 @@ Actualmente colaboro con Autoneum como supervisor de proyectos de disenio del pa
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center">
-                    <h3 class="font-alt font-w-600 letter-spacing-2 title-large text-gray-new">Mis últimos trabajos</h3>
-                    <p class="mt-3 text-gray text-extra-large"><i style="font-style: inherit;">Estoy buscando expandir mi portafolio mientras estoy joven.</i></p>
+                    <h3 class="font-alt font-w-600 letter-spacing-2 title-large text-gray-new">Servicios Realizados</h3>
+                    <p class="mt-3 text-gray text-extra-large"><i style="font-style: inherit;">Descripción de los servicios realizados por F Climent en Kinetia y colaborando con otras empresas</i></p>
                     <span class="bg-base-color mt-4 mx-auto sep-line-medium-thick-long"></span>
                 </div>
                 <!-- //.col-lg-8 -->

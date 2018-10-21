@@ -23,12 +23,12 @@ def portfolio(request):
 
     # Si se realiza un post desde la template, se entiende que se enviara el correo
     if request.method == 'POST':
-        mail = 'pythonemail3@gmail.com'    # Correo electronico de la persona que lo envia (Esta configurado en setting.py)
+        mail = 'kinetia@kinetia.ch'    # Correo electronico de la persona que lo envia (Esta configurado en setting.py)
         email = request.POST.get('email')  # Correo que ingresa el visitante de la pagina
         mensaje = request.POST.get('message')
         nombre = request.POST.get('name')
         tema = request.POST.get('subject')
-        receptor = ['pythonemail3@gmail.com'] # Correo al cual se envia el mensaje
+        receptor = ['kinetia@kinetia.ch'] # Correo al cual se envia el mensaje
         cuerpo_mensaje = nombre + "\n" + email + "\n\n\n" + mensaje
     # Funcion propia de Django para envio de correos
         send_mail(
@@ -56,3 +56,21 @@ def checkDevice(request):
         'is_mobile': is_mobile,
     }
     return render(request, 'mytemplate.html', context)
+
+def blog(request):
+
+    """Función para identificar el dispositivo y configurar vistas"""
+   
+    
+    contexto = {}
+    contexto['perfil'] = Perfil.objects.first()
+    contexto['proyectos'] = Proyecto.objects.all()
+    contexto['referencias'] = Referencia.objects.all()
+    contexto['habilidades'] = Experiencia.objects.filter(tipo='1')
+    contexto['conocimientos'] = Experiencia.objects.filter(tipo='2')
+    contexto['reconocimientos'] = Reconocimiento.objects.all()
+    
+    return render(request, 'form_page_landing.html', contexto)
+    
+    
+    
