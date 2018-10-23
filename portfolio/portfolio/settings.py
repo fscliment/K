@@ -38,30 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-   
-    # Wagtail
-    'wagtail.contrib.forms',
-    'wagtail.contrib.redirects',
-    'wagtail.embeds',
-    'wagtail.sites',
-    'wagtail.users',
-    'wagtail.snippets',
-    'wagtail.documents',
-    'wagtail.images',
-    'wagtail.search',
-    'wagtail.admin',
-    'wagtail.core',
-    "wagtail.contrib.routable_page",
-    
-    # Third party package used by the blog
-    'el_pagination',
-    'modelcluster',
-    'taggit',
-
-    # local Django app 
     'app_portfolio',
-    'blog',
-    'wagtailmd',
+#    'blog',
 ]
 
 MIDDLEWARE = [
@@ -72,8 +50,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'wagtail.core.middleware.SiteMiddleware',
-    'wagtail.contrib.redirects.middleware.RedirectMiddleware',
 ]
 
 ROOT_URLCONF = 'portfolio.urls'
@@ -155,9 +131,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = (os.path.join (BASE_DIR,),)
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
+BLOG_URL = '/app_blog/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-WAGTAIL_SITE_NAME = 'Wagtail'
-SITE_ID = 1
+BLOG_ROOT = os.path.join(BASE_DIR, 'blog')
 
 # Correo Electronico
 EMAIL_USE_TLS = True

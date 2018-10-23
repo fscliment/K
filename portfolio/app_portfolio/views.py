@@ -3,6 +3,7 @@ from app_portfolio.models import *
 from django.core.mail import send_mail
 
 # Agregue sus vistas (el equivalente el Controlador en un modelo MVC) aquí
+from butter_cms import ButterCMS
 def portfolio(request):
 
     """Inicializamos un diccionario que servirá como variable del contexto, dentro de la cual estaran todas las variables
@@ -57,20 +58,11 @@ def checkDevice(request):
     }
     return render(request, 'mytemplate.html', context)
 
-def blog(request):
 
-    """Función para identificar el dispositivo y configurar vistas"""
-   
-    
-    contexto = {}
-    contexto['perfil'] = Perfil.objects.first()
-    contexto['proyectos'] = Proyecto.objects.all()
-    contexto['referencias'] = Referencia.objects.all()
-    contexto['habilidades'] = Experiencia.objects.filter(tipo='1')
-    contexto['conocimientos'] = Experiencia.objects.filter(tipo='2')
-    contexto['reconocimientos'] = Reconocimiento.objects.all()
-    
-    return render(request, 'form_page_landing.html', contexto)
+def blog(request):
+    client = ButterCMS('your-token-goes-here')
+    posts = Proyecto.objects.all()
+    return render(request, 'blog.html', {'posts': posts})
     
     
     
