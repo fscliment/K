@@ -59,10 +59,5 @@ def checkDevice(request):
     return render(request, 'mytemplate.html', context)
 
 
-def blog(request):
-    client = ButterCMS('your-token-goes-here')
-    posts = Proyecto.objects.all()
-    return render(request, 'blog.html', {'posts': posts})
-    
     
     
