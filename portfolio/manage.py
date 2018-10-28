@@ -17,4 +17,5 @@ if __name__ == '__main__':
     from django.conf import settings
     
     print(settings.BASE_DIR)
+    print(settings.TEMPLATES)
     execute_from_command_line(sys.argv)

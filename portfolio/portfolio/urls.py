@@ -15,16 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from app_portfolio.views import *
-from blog.views import *
+import portfolio
+import app_portfolio.views
+import blog.views
 from django.conf.urls.static import static
 from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', portfolio, name = 'portfolio'),
-    path('', post_list, name='post_list'),
-    path('post/<int:pk>/', post_detail, name='post_detail'),
+    path('app_portfolio/',app_portfolio, name='app_portfolio'),
+    path('blog/', blog.views.post_list, name='post_list'),
+    path('blog/post/<int:pk>/', blog.views.post_detail, name='post_detail'),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
