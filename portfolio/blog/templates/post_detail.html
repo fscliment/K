@@ -1,16 +1,15 @@
 
-{% extends 'base.html' %}
+
+{% extends 'blog/base.html' %}
 
 {% block content %}
-    {% for post in posts %}
-        <div class="post">
+    <div class="post">
+        {% if posts%}
             <div class="date">
-            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-                {{ post.empresa}}
+                {{ post }}
             </div>
-            <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.empresa }}</a></h1>
-            <p>{{ post.empresa|linebreaksbr }}</p>
-        </div>
-    {% endfor %}
+        {% endif %}
+        <h1>{{ posts}}</h1>
+        <p>{{ posts|linebreaksbr }}</p>
+    </div>
 {% endblock %}
