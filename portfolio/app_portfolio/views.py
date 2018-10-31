@@ -3,7 +3,7 @@ from app_portfolio.models import *
 from django.core.mail import send_mail
 
 # Agregue sus vistas (el equivalente el Controlador en un modelo MVC) aquí
-from butter_cms import ButterCMS
+
 def portfolio(request):
 
     """Inicializamos un diccionario que servirá como variable del contexto, dentro de la cual estaran todas las variables

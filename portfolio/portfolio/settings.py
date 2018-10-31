@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'jquery',
     'app_portfolio',
     'blog',
 ]
@@ -131,7 +132,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = (os.path.join (BASE_DIR,),)
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
-BLOG_URL = '/app_blog/'
+BLOG_URL = '/blog/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 BLOG_ROOT = os.path.join(BASE_DIR, 'blog')
 
