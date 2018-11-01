@@ -38,7 +38,8 @@
 
             <ul class="list-unstyled components">
                 <p>Lista de Casos</p>
-                <li class="active">
+                <li>
+                    
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Casos</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
                         <li>
@@ -52,7 +53,17 @@
                 </li>
      
                 <li>
-                    <a href="#">Etiquetas</a>
+                    
+                    <a href="#etiquetasSubmenu" data-toggle="collapse" aria-expanded="false">Etiquetas</a>
+                    <ul class="collapse list-unstyled" id="etiquetasSubmenu">
+                        <li>
+                            {% for post in posts %}
+                            
+                               <li><a href = "#"> {{ post }} </a></li>
+                                
+                            {% endfor %}
+                        </li>
+                    </ul>                    
                 </li>
                 <li>
                     <a href="#">Contacto</a>
@@ -103,23 +114,17 @@
             </nav>
 
             <h2>Collapsible Sidebar Using Bootstrap 4</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+             <div class="post">
+                {% if posts%}
+                    <div class="date">
+                    {%for post in posts %}
+                        <li><a href = "#"> {{ post }} </a></li>
+                        <li>{{ post.descripcion }}</li>
+                    {% endfor %}
+                    </div>
+                {% endif %}
 
-            <div class="line"></div>
-
-            <h2>Lorem Ipsum Dolor</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-            <div class="line"></div>
-
-            <h2>Lorem Ipsum Dolor</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-            <div class="line"></div>
-
-            <h3>Lorem Ipsum Dolor</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
         </div>
     </div>
 
