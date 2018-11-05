@@ -113,13 +113,14 @@
                 </div>
             </nav>
 
-            <h2>Collapsible Sidebar Using Bootstrap 4</h2>
-             <div class="post">
+            <h2>KINETIA BLOG</h2>
+             <div class="posts">
                 {% if posts%}
-                    <div class="date">
+                    <div class="post">
                     {%for post in posts %}
-                        <li><a href = "#"> {{ post }} </a></li>
-                        <li>{{ post.descripcion }}</li>
+                        <h1 class="mt-4"><a href = "#"> {{ post.titulo }} para {{ post.empresa}}</a></h1>
+                        <p class="lead">{{ post.descripcion }}</p>
+                        <p>{{ post.tags }}</p>
                     {% endfor %}
                     </div>
                 {% endif %}
