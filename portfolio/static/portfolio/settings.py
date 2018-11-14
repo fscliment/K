@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+from django.utils.translation import ugettext_lazy as _
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,7 +26,7 @@ SECRET_KEY = 'ujm84v*txy!zb#^*hunjbs#5@9*9zyj)hue1l!%ecozjf8zzl$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -37,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'jquery',
     'app_portfolio',
+    'blog',
 ]
 
 MIDDLEWARE = [
@@ -104,9 +107,15 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-es'
 
-TIME_ZONE = 'UTC'
+LANGUAGES = (
+    ('en', _('English')),
+    ('es', _('Spanish')),
+)
+
+
+TIME_ZONE = 'Europe/Madrid'
 
 USE_I18N = True
 
@@ -122,3 +131,15 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # Development Environment
 STATICFILES_DIRS = (os.path.join (BASE_DIR,),)
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+BLOG_URL = '/blog/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+BLOG_ROOT = os.path.join(BASE_DIR, 'blog')
+
+# Correo Electronico
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'pythonemail3@gmail.com'
+EMAIL_HOST_PASSWORD = '4dm1n123'
+EMAIL_PORT = 587
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
