@@ -132,7 +132,7 @@ Actualmente colaboro con Autoneum como supervisor de proyectos de disenio del pa
                             <span class="d-block font-alt letter-spacing-2 text-extra-large text-white">Detalles de Contacto:</span>
                             <ul class="list-unstyled mt-2 text-gray text-large">
                                 <li>{{ perfil.nombre }}</li>
-                                <li class="pt-2">{{ perfil.address }}</li>
+                                <li class="pt-2">{{ perfil.direccion}}</li>
                                 <li class="pt-2">{{ perfil.telefono }}</li>
                                 <li class="pt-2">{{ perfil.email }}</li>
                                 {% if perfil.webpage %}
@@ -398,40 +398,44 @@ Actualmente colaboro con Autoneum como supervisor de proyectos de disenio del pa
         <div class="container-fluid mt-5 pt-5">
             <div class="row gallery-grid">
                 {% for proyecto in proyectos %}
-                    <div class="col-sm-12 col-md-6 col-xl-4 p-0">
-                        <figure>
-                            <div class="gallery-link">
-                                <a href="{{ proyecto.imagen.url }}" class="icon icon-small bg-gray-dark rounded-circle text-white zoom" title="{{ proyecto.title }}">
-                                    <i class="icon-Full-Screen"></i>
-                                </a>
-                                <a href="{% if proyecto.url %}{{ proyecto.url }}{% else %}#{% endif %}" class="icon icon-small bg-base-color rounded-circle text-white" target="_blank">
-                                    <i class="icon-Link"></i>
-                                </a>
-                            </div>
-                            <!-- //.gallery-link -->
-
-                            <div class="gallery-title">
-                                <span class="font-alt text-white">
-                                    <p class="text-medium text-uppercase" style="margin-bottom: 0px">{{ proyecto.titulo }}</p>
-                                    <p class="text-small" align="justify" style="margin-bottom: 0px; padding: 0 10px">{{ proyecto.descripcion }}</p>
-                                    {% if proyecto.tags %}
-                                        <ul>
-                                        {% for tag in proyecto.tags %}
-                                            <li class="text-small tag" style="display: inline-block;background-color: #171717;padding: 0 6px;border-radius: 10px;">{{ tag }}</li>
-                                        {% endfor %}
-                                        </ul>
-                                    {% endif %}
-                                </span>
-                            </div>
-                            <!-- //.gallery-title -->
-
-                            <div class="gallery-img" style="max-height: 100%; height: 100%">
-                                <img src="{{ proyecto.imagen.url }}" alt="" class="img-fluid" style="max-height: 100%; height: 100%">
-                            </div>
-                            <!-- //.gallery-img -->
-                        </figure>
-                    </div>
+                    {%if proyecto.in_catalog == "True" %}
+                        <div class="col-sm-12 col-md-6 col-xl-4 p-0">
+                            <figure>
+                                <div class="gallery-link">
+                                    <a href="{{ proyecto.imagen }}" class="icon icon-small bg-gray-dark rounded-circle text-white zoom" title="{{ proyecto.titulo}}">
+                                        <i class="icon-Full-Screen"></i>
+                                    </a>
+                                    <a href="{% if proyecto.url %}{{ proyecto.url }}{% else %}#{% endif %}" class="icon icon-small bg-base-color rounded-circle text-white" target="_blank">
+                                        <i class="icon-Link"></i>
+                                    </a>
+                                </div>
+                                <!-- //.gallery-link -->
+    
+                                <div class="gallery-title">
+                                    
+                                        <span class="font-alt text-white">
+                                            <p class="text-medium text-uppercase" style="margin-bottom: 0px">{{ proyecto.titulo }}</p>
+                                            <p class="text-small" align="justify" style="margin-bottom: 0px; padding: 0 10px">{{ proyecto.descripcion }}</p>
+                                            {% if proyecto.tags %}
+                                                <ul>
+                                                {% for tag in proyecto.tags %}
+                                                    <li class="text-small tag" style="display: inline-block;background-color: #171717;padding: 0 6px;border-radius: 10px;">{{ tag }}</li>
+                                                {% endfor %}
+                                                </ul>
+                                            {% endif %}
+                                        </span>
+                                </div>
+                                <!-- //.gallery-title -->
+    
+                                <div class="gallery-img" style="max-height: 100%; height: 100%">
+                                    <img src="{{ proyecto.imagen.url }}" alt="" class="img-fluid" style="max-height: 100%; height: 100%">
+                                </div>
+                                <!-- //.gallery-img -->
+                            </figure>
+                        </div>
+                    {% endif %}
                     <!-- //.col-md-6 -->
+
                 {%  endfor %}
             </div>
             <!-- //.row -->

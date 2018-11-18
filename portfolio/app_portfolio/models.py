@@ -51,7 +51,8 @@ class Proyecto(models.Model):
     tags = models.CharField('Etiquetas', max_length=64, blank=True, null=True, help_text="Separe las etiquetas con una coma: tag1,tag2,tag3...")
     url = models.URLField('URL', max_length=128)
     imagen = models.ImageField(upload_to="proyectos_imagenes")
-    empresa = models.CharField('Título', max_length = 64, blank=False, null=False)
+    empresa = models.CharField('Empresa', max_length = 64, blank=False, null=True)
+    in_catalog = models.BooleanField(default=True)
 
     def __str__(self):
         return self.titulo
