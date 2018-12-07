@@ -51,7 +51,7 @@ class Proyecto(models.Model):
     tags = models.CharField('Etiquetas', max_length=64, blank=True, null=True, help_text="Separe las etiquetas con una coma: tag1,tag2,tag3...")
     url = models.URLField('URL', max_length=128)
     imagen = models.ImageField(upload_to="proyectos_imagenes")
-    empresa = models.CharField('Empresa', max_length = 64, blank=False, null=True)
+    empresa = models.CharField('Empresa', max_length = 64, blank=False, null=False)
     in_catalog = models.BooleanField(default=True)
 
     def __str__(self):
@@ -103,3 +103,15 @@ class Reconocimiento(models.Model):
     class Meta:
         verbose_name = 'Reconocimiento'
         verbose_name_plural = 'Reconocimientos'
+        
+class Blog(models.Model):
+    lema = models.CharField('Lema', max_length = 64, blank=False, null=False)
+    imagen = models.ImageField(upload_to="blog_imagenes")
+    imagen_mobile = models.ImageField(upload_to = "blog_imagenes_mobile")
+
+    def __str__(self):
+        return self.lema
+
+    class Meta:
+        verbose_name = 'Blog'
+        verbose_name_plural = 'Blogs'

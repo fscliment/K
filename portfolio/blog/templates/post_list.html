@@ -114,10 +114,18 @@
             </nav>
             <div class = "container">
                 <div class="col-lg-15">
-                    {% if is_mobile %}    
-                        <img src="{% static 'assets/images/kinetia_blog.png' %}" alt="Kinetia" class="img-fluid kinetia-logo">
+                <!-- Llamo al for para listar el contenido, luego no tengo que usar el .url Los datos de estetica del blos estan en /blog/assets/imagen, le paso el path /blog en urls.py-->
+                    {% if is_mobile %}
+                         
+                        {% for img in blog_files %}
+                            <img src="{{img.imagen_mobile}}" alt="Kinetia" class="img-fluid kinetia-logo">
+                        {% endfor%}
+                        
                     {% else %}
-                        <img src="{% static 'assets/images/kinetia_blog.png' %}" alt="Kinetia" class="img-fluid kinetia-logo">
+                    
+                         {% for img in blog_files %}
+                            <img src="{{img.imagen}}" alt="Kinetia" class="img-fluid kinetia-logo">
+                        {% endfor%}
                     {% endif %}
             </div>        
                 </div>
@@ -132,7 +140,7 @@
                                 <p class="lead">{{ post.descripcion }}</p>
                                 <div class = "container">
                                     <div class="col-md-15">
-                                        <img src= "{{ post.imagen }}" alt="PostPic">
+                                        <img src= "{{ post.imagen.url }}" alt="PostPic">
                                     </div>
                                 </div>
                                 {% if post.tags %}
