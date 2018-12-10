@@ -414,8 +414,8 @@ Actualmente colaboro con Autoneum como supervisor de proyectos de disenio del pa
                                 <div class="gallery-title">
                                     
                                         <span class="font-alt text-white">
-                                            <p class="text-medium text-uppercase" style="margin-bottom: 0px">{{ proyecto.titulo }}</p>
-                                            <p class="text-small" align="justify" style="margin-bottom: 0px; padding: 0 10px">{{ proyecto.descripcion }}</p>
+                                            <p class="text-xl text-uppercase" style="margin-bottom: 0px">{{ proyecto.titulo }}</p>
+                                            <p class="text-large" align="justify" style="margin-bottom: 0px; padding: 0 10px">{{ proyecto.descripcion }}</p>
                                             {% if proyecto.tags %}
                                                 <ul>
                                                 {% for tag in proyecto.tags %}
@@ -427,8 +427,8 @@ Actualmente colaboro con Autoneum como supervisor de proyectos de disenio del pa
                                 </div>
                                 <!-- //.gallery-title -->
     
-                                <div class="gallery-img" style="max-height: 100%; height: 100%">
-                                    <img src="{{ proyecto.imagen.url }}" alt="" class="img-fluid" style="max-height: 100%; height: 100%">
+                                <div class="gallery-img; text-center" style="width: auto">
+                                    <img src="{{ proyecto.imagen.url }}" alt="" class= "img-fluid" style="width: 100%">
                                 </div>
                                 <!-- //.gallery-img -->
                             </figure>
