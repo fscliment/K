@@ -9588,3 +9588,515 @@ django.template.base.VariableDoesNotExist: <unprintable VariableDoesNotExist obj
 "GET /media/proyectos_imagenes/campbell_rojo_k.png HTTP/1.1" 304 0
 "GET /media/proyectos_imagenes/hadera_rojo_k.png HTTP/1.1" 304 0
 "GET /static/assets/images/kinetia_blog.png HTTP/1.1" 200 91089
+(0.038) SELECT "app_portfolio_perfil"."id", "app_portfolio_perfil"."autor", "app_portfolio_perfil"."nombre", "app_portfolio_perfil"."direccion", "app_portfolio_perfil"."telefono", "app_portfolio_perfil"."email", "app_portfolio_perfil"."webpage", "app_portfolio_perfil"."puesto", "app_portfolio_perfil"."imagen", "app_portfolio_perfil"."cv", "app_portfolio_perfil"."fecha_nacimiento" FROM "app_portfolio_perfil" ORDER BY "app_portfolio_perfil"."id" ASC  LIMIT 1; args=()
+(0.000) SELECT "app_portfolio_proyecto"."id", "app_portfolio_proyecto"."titulo", "app_portfolio_proyecto"."descripcion", "app_portfolio_proyecto"."tags", "app_portfolio_proyecto"."url", "app_portfolio_proyecto"."imagen", "app_portfolio_proyecto"."empresa", "app_portfolio_proyecto"."in_catalog" FROM "app_portfolio_proyecto"; args=()
+(0.000) SELECT "app_portfolio_experiencia"."id", "app_portfolio_experiencia"."nombre", "app_portfolio_experiencia"."porcentaje", "app_portfolio_experiencia"."tipo" FROM "app_portfolio_experiencia" WHERE "app_portfolio_experiencia"."tipo" = '2'  LIMIT 21; args=('2',)
+(0.000) SELECT "app_portfolio_reconocimiento"."id", "app_portfolio_reconocimiento"."titulo", "app_portfolio_reconocimiento"."descripcion" FROM "app_portfolio_reconocimiento"  LIMIT 21; args=()
+(0.000) SELECT "app_portfolio_referencia"."id", "app_portfolio_referencia"."nombre", "app_portfolio_referencia"."puesto", "app_portfolio_referencia"."empresa", "app_portfolio_referencia"."comentario", "app_portfolio_referencia"."imagen" FROM "app_portfolio_referencia"  LIMIT 21; args=()
+(0.000) SELECT "app_portfolio_experiencia"."id", "app_portfolio_experiencia"."nombre", "app_portfolio_experiencia"."porcentaje", "app_portfolio_experiencia"."tipo" FROM "app_portfolio_experiencia" WHERE "app_portfolio_experiencia"."tipo" = '1'  LIMIT 21; args=('1',)
+Exception while resolving variable 'is_mobile' in template 'portfolio.html'.
+Traceback (most recent call last):
+  File "/Users/fscliment/Soft/kinetia/K/venv/lib/python3.5/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/Users/fscliment/Soft/kinetia/K/venv/lib/python3.5/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_mobile'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/fscliment/Soft/kinetia/K/venv/lib/python3.5/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_mobile'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/fscliment/Soft/kinetia/K/venv/lib/python3.5/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_mobile'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/fscliment/Soft/kinetia/K/venv/lib/python3.5/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_mobile] in [{'True': True, 'False': False, 'None': None}, {'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x10d685710>, 'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x10d651840>>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x10d6dbae8>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x10d683080>, 'request': <WSGIRequest: GET '/'>, 'DEFAULT_MESSAGE_LEVELS': {'INFO': 20, 'SUCCESS': 25, 'DEBUG': 10, 'WARNING': 30, 'ERROR': 40}}, {}, {'conocimientos': <QuerySet []>, 'perfil': <Perfil: KINETIA>, 'reconocimientos': <QuerySet [<Reconocimiento: Marketing Excellence Awards 2017>, <Reconocimiento: The "Big Idea" competition 2017>, <Reconocimiento: Water seven art directors club awards 2016>, <Reconocimiento: Building Better Python Tools Hackathon>]>, 'referencias': <QuerySet [<Referencia: Carlos Calisalvo>, <Referencia: F X Magrans>, <Referencia: Oriol Gibert>]>, 'habilidades': <QuerySet [<Experiencia: Análisis Modal Experimental>, <Experiencia: Análisis de Formas Modales en Operación (ODS)>, <Experiencia: Medida de Vibraciones Torsionales>, <Experiencia: Análisis Modal sobre Modelos Numéricos (FEM)>, <Experiencia: Medidas de Ruido Radiado>, <Experiencia: Intensimetría Acústica>]>, 'proyectos': <QuerySet [<Proyecto: Solución a problema de roturas en Ducto de una planta de Fosfatos>, <Proyecto: Validación dinámica de la Turbina Eólica ALSTOM Haliade 160>, <Proyecto: Modelo de Elementos Finitos de bomba vertical de 1MW Sulzer para la planta de Carlsbad.>, <Proyecto: Estudio de Respuesta Sísmica de Armario de Transformadores>, <Proyecto: Análisis de Vibración de Bombas de Agua de Mar>, <Proyecto: Análisis Modal de la bancada de ensayos del generador Haliade 160>, <Proyecto: Altos niveles de Vibración en la Reductora de una Extrusora >, <Proyecto: Definición de Ensayo de durabilidad en Mesa Vibrante para Radiadores Ordóñez>, <Proyecto: Diseño Dinámico y Cálculo Sísmico de la Bomba Vertical SULZER TR350>, <Proyecto: Análisis Dinámico de dos Bombas Verticales de Circulación>, <Proyecto: Altos Niveles de Vibración en bombas Horizontales de HTF>, <Proyecto: Análisis de Niveles de Vibración en Vivienda Provocados por la Actividad de una Planta>, <Proyecto: Análisis de Vibración en una Bomba Horizontal>, <Proyecto: Análisis de Vibraciones y Diagnóstico de una turbina de Vapor>, <Proyecto: Análisis y Diagnóstico de Vibraciones en un Compresor>]>}]
+(0.000) SELECT "app_portfolio_experiencia"."id", "app_portfolio_experiencia"."nombre", "app_portfolio_experiencia"."porcentaje", "app_portfolio_experiencia"."tipo" FROM "app_portfolio_experiencia" WHERE "app_portfolio_experiencia"."tipo" = '1'; args=('1',)
+(0.000) SELECT "app_portfolio_experiencia"."id", "app_portfolio_experiencia"."nombre", "app_portfolio_experiencia"."porcentaje", "app_portfolio_experiencia"."tipo" FROM "app_portfolio_experiencia" WHERE "app_portfolio_experiencia"."tipo" = '2'; args=('2',)
+(0.000) SELECT "app_portfolio_referencia"."id", "app_portfolio_referencia"."nombre", "app_portfolio_referencia"."puesto", "app_portfolio_referencia"."empresa", "app_portfolio_referencia"."comentario", "app_portfolio_referencia"."imagen" FROM "app_portfolio_referencia"; args=()
+"GET / HTTP/1.1" 200 76597
+"GET /media/proyectos_imagenes/intecsa.png HTTP/1.1" 304 0
+"GET /media/proyectos_imagenes/bomba_rojo_k.png HTTP/1.1" 304 0
+"GET /media/proyectos_imagenes/hadera_rojo_k.png HTTP/1.1" 304 0
+"GET /media/proyectos_imagenes/wfall_rojo_k_peq.png HTTP/1.1" 304 0
+"GET /media/proyectos_imagenes/campbell_rojo_k.png HTTP/1.1" 304 0
+"GET /media/proyectos_imagenes/frfs_rojo_k.png HTTP/1.1" 304 0
+"GET /media/referencias_imagenes/calisalvo_intecsa.jpg HTTP/1.1" 304 0
+"GET /media/referencias_imagenes/Gibert_GE.jpg HTTP/1.1" 304 0
+"GET /media/referencias_imagenes/Magrans_ICR.jpg HTTP/1.1" 304 0
+"GET /static/assets/images/favi.jpg HTTP/1.1" 200 10723
+(0.009) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.002) SELECT "app_portfolio_perfil"."id", "app_portfolio_perfil"."autor", "app_portfolio_perfil"."nombre", "app_portfolio_perfil"."direccion", "app_portfolio_perfil"."telefono", "app_portfolio_perfil"."email", "app_portfolio_perfil"."webpage", "app_portfolio_perfil"."puesto", "app_portfolio_perfil"."imagen", "app_portfolio_perfil"."cv", "app_portfolio_perfil"."fecha_nacimiento" FROM "app_portfolio_perfil" ORDER BY "app_portfolio_perfil"."id" ASC  LIMIT 1; args=()
+(0.000) SELECT "app_portfolio_proyecto"."id", "app_portfolio_proyecto"."titulo", "app_portfolio_proyecto"."descripcion", "app_portfolio_proyecto"."tags", "app_portfolio_proyecto"."url", "app_portfolio_proyecto"."imagen", "app_portfolio_proyecto"."empresa", "app_portfolio_proyecto"."in_catalog" FROM "app_portfolio_proyecto"; args=()
+(0.000) SELECT "app_portfolio_experiencia"."id", "app_portfolio_experiencia"."nombre", "app_portfolio_experiencia"."porcentaje", "app_portfolio_experiencia"."tipo" FROM "app_portfolio_experiencia" WHERE "app_portfolio_experiencia"."tipo" = '1'  LIMIT 21; args=('1',)
+(0.000) SELECT "app_portfolio_experiencia"."id", "app_portfolio_experiencia"."nombre", "app_portfolio_experiencia"."porcentaje", "app_portfolio_experiencia"."tipo" FROM "app_portfolio_experiencia" WHERE "app_portfolio_experiencia"."tipo" = '2'  LIMIT 21; args=('2',)
+(0.000) SELECT "app_portfolio_referencia"."id", "app_portfolio_referencia"."nombre", "app_portfolio_referencia"."puesto", "app_portfolio_referencia"."empresa", "app_portfolio_referencia"."comentario", "app_portfolio_referencia"."imagen" FROM "app_portfolio_referencia"  LIMIT 21; args=()
+(0.000) SELECT "app_portfolio_reconocimiento"."id", "app_portfolio_reconocimiento"."titulo", "app_portfolio_reconocimiento"."descripcion" FROM "app_portfolio_reconocimiento"  LIMIT 21; args=()
+Exception while resolving variable 'is_mobile' in template 'portfolio.html'.
+Traceback (most recent call last):
+  File "/Users/fscliment/Soft/kinetia/K/venv/lib/python3.5/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/Users/fscliment/Soft/kinetia/K/venv/lib/python3.5/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_mobile'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/fscliment/Soft/kinetia/K/venv/lib/python3.5/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_mobile'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/fscliment/Soft/kinetia/K/venv/lib/python3.5/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_mobile'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/fscliment/Soft/kinetia/K/venv/lib/python3.5/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_mobile] in [{'None': None, 'True': True, 'False': False}, {'request': <WSGIRequest: GET '/'>, 'DEFAULT_MESSAGE_LEVELS': {'WARNING': 30, 'SUCCESS': 25, 'DEBUG': 10, 'INFO': 20, 'ERROR': 40}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x10d61d588>, 'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x10d647268>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x10d66c668>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x10d614d90>>}, {}, {'proyectos': <QuerySet [<Proyecto: Solución a problema de roturas en Ducto de una planta de Fosfatos>, <Proyecto: Validación dinámica de la Turbina Eólica ALSTOM Haliade 160>, <Proyecto: Modelo de Elementos Finitos de bomba vertical de 1MW Sulzer para la planta de Carlsbad.>, <Proyecto: Estudio de Respuesta Sísmica de Armario de Transformadores>, <Proyecto: Análisis de Vibración de Bombas de Agua de Mar>, <Proyecto: Análisis Modal de la bancada de ensayos del generador Haliade 160>, <Proyecto: Altos niveles de Vibración en la Reductora de una Extrusora >, <Proyecto: Definición de Ensayo de durabilidad en Mesa Vibrante para Radiadores Ordóñez>, <Proyecto: Diseño Dinámico y Cálculo Sísmico de la Bomba Vertical SULZER TR350>, <Proyecto: Análisis Dinámico de dos Bombas Verticales de Circulación>, <Proyecto: Altos Niveles de Vibración en bombas Horizontales de HTF>, <Proyecto: Análisis de Niveles de Vibración en Vivienda Provocados por la Actividad de una Planta>, <Proyecto: Análisis de Vibración en una Bomba Horizontal>, <Proyecto: Análisis de Vibraciones y Diagnóstico de una turbina de Vapor>, <Proyecto: Análisis y Diagnóstico de Vibraciones en un Compresor>]>, 'perfil': <Perfil: KINETIA>, 'habilidades': <QuerySet [<Experiencia: Análisis Modal Experimental>, <Experiencia: Análisis de Formas Modales en Operación (ODS)>, <Experiencia: Medida de Vibraciones Torsionales>, <Experiencia: Análisis Modal sobre Modelos Numéricos (FEM)>, <Experiencia: Medidas de Ruido Radiado>, <Experiencia: Intensimetría Acústica>]>, 'conocimientos': <QuerySet []>, 'referencias': <QuerySet [<Referencia: Carlos Calisalvo>, <Referencia: F X Magrans>, <Referencia: Oriol Gibert>]>, 'reconocimientos': <QuerySet [<Reconocimiento: Marketing Excellence Awards 2017>, <Reconocimiento: The "Big Idea" competition 2017>, <Reconocimiento: Water seven art directors club awards 2016>, <Reconocimiento: Building Better Python Tools Hackathon>]>}]
+(0.000) SELECT "app_portfolio_experiencia"."id", "app_portfolio_experiencia"."nombre", "app_portfolio_experiencia"."porcentaje", "app_portfolio_experiencia"."tipo" FROM "app_portfolio_experiencia" WHERE "app_portfolio_experiencia"."tipo" = '1'; args=('1',)
+(0.000) SELECT "app_portfolio_experiencia"."id", "app_portfolio_experiencia"."nombre", "app_portfolio_experiencia"."porcentaje", "app_portfolio_experiencia"."tipo" FROM "app_portfolio_experiencia" WHERE "app_portfolio_experiencia"."tipo" = '2'; args=('2',)
+(0.000) SELECT "app_portfolio_referencia"."id", "app_portfolio_referencia"."nombre", "app_portfolio_referencia"."puesto", "app_portfolio_referencia"."empresa", "app_portfolio_referencia"."comentario", "app_portfolio_referencia"."imagen" FROM "app_portfolio_referencia"; args=()
+"GET / HTTP/1.1" 200 76597
+"GET /static/assets/css/flexslider.css HTTP/1.1" 200 6865
+"GET /static/assets/css/magnific-popup.css HTTP/1.1" 200 7241
+"GET /static/assets/css/main.css HTTP/1.1" 200 449
+"GET /static/assets/css/font-awesome.min.css HTTP/1.1" 200 31023
+"GET /static/assets/css/theme.min.css HTTP/1.1" 200 37768
+"GET /static/assets/css/icons-mind.css HTTP/1.1" 200 96629
+"GET /static/assets/css/color.css HTTP/1.1" 200 757
+"GET /static/assets/css/style.css HTTP/1.1" 200 6077
+"GET /static/assets/css/switch_style.css HTTP/1.1" 200 2086
+"GET /static/assets/css/bootstrap.min.css HTTP/1.1" 200 144877
+"GET /static/assets/js/popper.min.js HTTP/1.1" 200 19236
+"GET /static/assets/js/jquery.easing.min.js HTTP/1.1" 200 5564
+"GET /static/assets/js/jquery.sticky.js HTTP/1.1" 200 10085
+"GET /static/assets/js/pace.min.js HTTP/1.1" 200 12552
+"GET /static/assets/js/jquery.matchHeight.min.js HTTP/1.1" 200 3380
+"GET /static/assets/js/jquery.inview.min.js HTTP/1.1" 200 1438
+"GET /static/assets/js/bootstrap.min.js HTTP/1.1" 200 48944
+"GET /static/assets/js/jquery.min.js HTTP/1.1" 200 86927
+"GET /static/assets/js/jquery.flexslider.min.js HTTP/1.1" 200 22732
+"GET /static/assets/js/imagesloaded.pkgd.min.js HTTP/1.1" 200 5594
+"GET /static/assets/js/jquery.countTo.js HTTP/1.1" 200 3761
+"GET /static/assets/js/jquery.magnific-popup.min.js HTTP/1.1" 200 20216
+"GET /static/assets/js/jquery.validate.min.js HTTP/1.1" 200 23070
+"GET /static/assets/js/theme.js HTTP/1.1" 200 12870
+"GET /static/assets/js/switch_style.js HTTP/1.1" 200 718
+"GET /media/perfil_imagenes/profile-picture-2.jpg HTTP/1.1" 200 76819
+"GET /static/assets/images/favi_small.jpg HTTP/1.1" 200 10723
+"GET /static/assets/images/Kinetia_InPixio_grande_dif.png HTTP/1.1" 200 294982
+"GET /media/proyectos_imagenes/hadera_rojo_k.png HTTP/1.1" 200 39870
+"GET /media/proyectos_imagenes/campbell_rojo_k.png HTTP/1.1" 200 189777
+"GET /media/proyectos_imagenes/bomba_rojo_k.png HTTP/1.1" 200 62675
+"GET /media/proyectos_imagenes/frfs_rojo_k.png HTTP/1.1" 200 187137
+"GET /media/referencias_imagenes/calisalvo_intecsa.jpg HTTP/1.1" 200 16034
+"GET /media/referencias_imagenes/Magrans_ICR.jpg HTTP/1.1" 200 6492
+"GET /media/proyectos_imagenes/wfall_rojo_k_peq.png HTTP/1.1" 200 191803
+"GET /static/assets/images/kinetia_logo_oepm.jpg HTTP/1.1" 200 9315
+"GET /media/referencias_imagenes/Gibert_GE.jpg HTTP/1.1" 200 197559
+"GET /static/assets/fonts/fontawesome-webfont3e6e.html?v=4.7.0 HTTP/1.1" 200 77160
+"GET /static/assets/fonts/icons-mind/icomoonca27.woff?-rdmvgc HTTP/1.1" 200 14204
+"GET /media/proyectos_imagenes/intecsa.png HTTP/1.1" 200 1481153
+"GET /static/assets/images/bg-home-1.jpg HTTP/1.1" 200 4715107
+"GET /static/assets/images/favi.jpg HTTP/1.1" 200 10723
+"GET /blog HTTP/1.1" 301 0
+(0.023) SELECT "app_portfolio_proyecto"."id", "app_portfolio_proyecto"."titulo", "app_portfolio_proyecto"."descripcion", "app_portfolio_proyecto"."tags", "app_portfolio_proyecto"."url", "app_portfolio_proyecto"."imagen", "app_portfolio_proyecto"."empresa", "app_portfolio_proyecto"."in_catalog" FROM "app_portfolio_proyecto" ORDER BY "app_portfolio_proyecto"."titulo" ASC; args=()
+(0.000) SELECT "app_portfolio_blog"."id", "app_portfolio_blog"."lema", "app_portfolio_blog"."imagen", "app_portfolio_blog"."imagen_mobile" FROM "app_portfolio_blog"  LIMIT 21; args=()
+Exception while resolving variable 'is_mobile' in template 'post_list.html'.
+Traceback (most recent call last):
+  File "/Users/fscliment/Soft/kinetia/K/venv/lib/python3.5/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/Users/fscliment/Soft/kinetia/K/venv/lib/python3.5/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_mobile'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/fscliment/Soft/kinetia/K/venv/lib/python3.5/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_mobile'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/fscliment/Soft/kinetia/K/venv/lib/python3.5/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_mobile'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/fscliment/Soft/kinetia/K/venv/lib/python3.5/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_mobile] in [{'None': None, 'True': True, 'False': False}, {'request': <WSGIRequest: GET '/blog/'>, 'DEFAULT_MESSAGE_LEVELS': {'WARNING': 30, 'SUCCESS': 25, 'DEBUG': 10, 'INFO': 20, 'ERROR': 40}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x10d6632b0>, 'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x10d6b4ae8>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x10d663e48>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x10d6b42f0>>}, {}, {'posts': <QuerySet [<Proyecto: Altos Niveles de Vibración en bombas Horizontales de HTF>, <Proyecto: Altos niveles de Vibración en la Reductora de una Extrusora >, <Proyecto: Análisis Dinámico de dos Bombas Verticales de Circulación>, <Proyecto: Análisis Modal de la bancada de ensayos del generador Haliade 160>, <Proyecto: Análisis de Niveles de Vibración en Vivienda Provocados por la Actividad de una Planta>, <Proyecto: Análisis de Vibraciones y Diagnóstico de una turbina de Vapor>, <Proyecto: Análisis de Vibración de Bombas de Agua de Mar>, <Proyecto: Análisis de Vibración en una Bomba Horizontal>, <Proyecto: Análisis y Diagnóstico de Vibraciones en un Compresor>, <Proyecto: Definición de Ensayo de durabilidad en Mesa Vibrante para Radiadores Ordóñez>, <Proyecto: Diseño Dinámico y Cálculo Sísmico de la Bomba Vertical SULZER TR350>, <Proyecto: Estudio de Respuesta Sísmica de Armario de Transformadores>, <Proyecto: Modelo de Elementos Finitos de bomba vertical de 1MW Sulzer para la planta de Carlsbad.>, <Proyecto: Solución a problema de roturas en Ducto de una planta de Fosfatos>, <Proyecto: Validación dinámica de la Turbina Eólica ALSTOM Haliade 160>]>, 'blog_files': <QuerySet [<Blog: default>]>}]
+(0.000) SELECT "app_portfolio_blog"."id", "app_portfolio_blog"."lema", "app_portfolio_blog"."imagen", "app_portfolio_blog"."imagen_mobile" FROM "app_portfolio_blog"; args=()
+"GET /blog/ HTTP/1.1" 200 276681
+"GET /static/assets/css/style3.css HTTP/1.1" 200 3340
+"GET /media/proyectos_imagenes/favi_trans_small.png HTTP/1.1" 200 22758
+"GET /static/assets/images/kinetia_blog.png HTTP/1.1" 200 91089
+(0.025) SELECT "app_portfolio_perfil"."id", "app_portfolio_perfil"."autor", "app_portfolio_perfil"."nombre", "app_portfolio_perfil"."direccion", "app_portfolio_perfil"."telefono", "app_portfolio_perfil"."email", "app_portfolio_perfil"."webpage", "app_portfolio_perfil"."puesto", "app_portfolio_perfil"."imagen", "app_portfolio_perfil"."cv", "app_portfolio_perfil"."fecha_nacimiento" FROM "app_portfolio_perfil" ORDER BY "app_portfolio_perfil"."id" ASC  LIMIT 1; args=()
+(0.000) SELECT "app_portfolio_proyecto"."id", "app_portfolio_proyecto"."titulo", "app_portfolio_proyecto"."descripcion", "app_portfolio_proyecto"."tags", "app_portfolio_proyecto"."url", "app_portfolio_proyecto"."imagen", "app_portfolio_proyecto"."empresa", "app_portfolio_proyecto"."in_catalog" FROM "app_portfolio_proyecto"; args=()
+(0.000) SELECT "app_portfolio_experiencia"."id", "app_portfolio_experiencia"."nombre", "app_portfolio_experiencia"."porcentaje", "app_portfolio_experiencia"."tipo" FROM "app_portfolio_experiencia" WHERE "app_portfolio_experiencia"."tipo" = '1'  LIMIT 21; args=('1',)
+(0.000) SELECT "app_portfolio_experiencia"."id", "app_portfolio_experiencia"."nombre", "app_portfolio_experiencia"."porcentaje", "app_portfolio_experiencia"."tipo" FROM "app_portfolio_experiencia" WHERE "app_portfolio_experiencia"."tipo" = '2'  LIMIT 21; args=('2',)
+(0.000) SELECT "app_portfolio_referencia"."id", "app_portfolio_referencia"."nombre", "app_portfolio_referencia"."puesto", "app_portfolio_referencia"."empresa", "app_portfolio_referencia"."comentario", "app_portfolio_referencia"."imagen" FROM "app_portfolio_referencia"  LIMIT 21; args=()
+(0.000) SELECT "app_portfolio_reconocimiento"."id", "app_portfolio_reconocimiento"."titulo", "app_portfolio_reconocimiento"."descripcion" FROM "app_portfolio_reconocimiento"  LIMIT 21; args=()
+Exception while resolving variable 'is_mobile' in template 'portfolio.html'.
+Traceback (most recent call last):
+  File "/Users/fscliment/Soft/kinetia/K/venv/lib/python3.5/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/Users/fscliment/Soft/kinetia/K/venv/lib/python3.5/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_mobile'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/fscliment/Soft/kinetia/K/venv/lib/python3.5/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_mobile'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/fscliment/Soft/kinetia/K/venv/lib/python3.5/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_mobile'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/fscliment/Soft/kinetia/K/venv/lib/python3.5/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_mobile] in [{'None': None, 'True': True, 'False': False}, {'request': <WSGIRequest: GET '/'>, 'DEFAULT_MESSAGE_LEVELS': {'WARNING': 30, 'SUCCESS': 25, 'DEBUG': 10, 'INFO': 20, 'ERROR': 40}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x10d669908>, 'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x10d6471e0>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x10d663438>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x10d6b4620>>}, {}, {'proyectos': <QuerySet [<Proyecto: Solución a problema de roturas en Ducto de una planta de Fosfatos>, <Proyecto: Validación dinámica de la Turbina Eólica ALSTOM Haliade 160>, <Proyecto: Modelo de Elementos Finitos de bomba vertical de 1MW Sulzer para la planta de Carlsbad.>, <Proyecto: Estudio de Respuesta Sísmica de Armario de Transformadores>, <Proyecto: Análisis de Vibración de Bombas de Agua de Mar>, <Proyecto: Análisis Modal de la bancada de ensayos del generador Haliade 160>, <Proyecto: Altos niveles de Vibración en la Reductora de una Extrusora >, <Proyecto: Definición de Ensayo de durabilidad en Mesa Vibrante para Radiadores Ordóñez>, <Proyecto: Diseño Dinámico y Cálculo Sísmico de la Bomba Vertical SULZER TR350>, <Proyecto: Análisis Dinámico de dos Bombas Verticales de Circulación>, <Proyecto: Altos Niveles de Vibración en bombas Horizontales de HTF>, <Proyecto: Análisis de Niveles de Vibración en Vivienda Provocados por la Actividad de una Planta>, <Proyecto: Análisis de Vibración en una Bomba Horizontal>, <Proyecto: Análisis de Vibraciones y Diagnóstico de una turbina de Vapor>, <Proyecto: Análisis y Diagnóstico de Vibraciones en un Compresor>]>, 'perfil': <Perfil: KINETIA>, 'habilidades': <QuerySet [<Experiencia: Análisis Modal Experimental>, <Experiencia: Análisis de Formas Modales en Operación (ODS)>, <Experiencia: Medida de Vibraciones Torsionales>, <Experiencia: Análisis Modal sobre Modelos Numéricos (FEM)>, <Experiencia: Medidas de Ruido Radiado>, <Experiencia: Intensimetría Acústica>]>, 'conocimientos': <QuerySet []>, 'referencias': <QuerySet [<Referencia: Carlos Calisalvo>, <Referencia: F X Magrans>, <Referencia: Oriol Gibert>]>, 'reconocimientos': <QuerySet [<Reconocimiento: Marketing Excellence Awards 2017>, <Reconocimiento: The "Big Idea" competition 2017>, <Reconocimiento: Water seven art directors club awards 2016>, <Reconocimiento: Building Better Python Tools Hackathon>]>}]
+(0.000) SELECT "app_portfolio_experiencia"."id", "app_portfolio_experiencia"."nombre", "app_portfolio_experiencia"."porcentaje", "app_portfolio_experiencia"."tipo" FROM "app_portfolio_experiencia" WHERE "app_portfolio_experiencia"."tipo" = '1'; args=('1',)
+(0.000) SELECT "app_portfolio_experiencia"."id", "app_portfolio_experiencia"."nombre", "app_portfolio_experiencia"."porcentaje", "app_portfolio_experiencia"."tipo" FROM "app_portfolio_experiencia" WHERE "app_portfolio_experiencia"."tipo" = '2'; args=('2',)
+(0.000) SELECT "app_portfolio_referencia"."id", "app_portfolio_referencia"."nombre", "app_portfolio_referencia"."puesto", "app_portfolio_referencia"."empresa", "app_portfolio_referencia"."comentario", "app_portfolio_referencia"."imagen" FROM "app_portfolio_referencia"; args=()
+"GET / HTTP/1.1" 200 76627
+"GET /static/assets/css/flexslider.css HTTP/1.1" 200 6865
+"GET /static/assets/css/magnific-popup.css HTTP/1.1" 200 7241
+"GET /static/assets/css/font-awesome.min.css HTTP/1.1" 200 31023
+"GET /static/assets/css/main.css HTTP/1.1" 200 449
+"GET /static/assets/css/theme.min.css HTTP/1.1" 200 37768
+"GET /static/assets/css/icons-mind.css HTTP/1.1" 200 96629
+"GET /static/assets/css/bootstrap.min.css HTTP/1.1" 200 144877
+"GET /static/assets/css/style.css HTTP/1.1" 200 6077
+"GET /static/assets/css/color.css HTTP/1.1" 200 757
+"GET /static/assets/css/switch_style.css HTTP/1.1" 200 2086
+"GET /static/assets/images/favi.jpg HTTP/1.1" 200 10723
+Watching for file changes with StatReloader
+Waiting for apps ready_event.
+Main Django thread has terminated before apps are ready.
+Watching for file changes with StatReloader
+Waiting for apps ready_event.
+Main Django thread has terminated before apps are ready.
+Watching for file changes with StatReloader
+Waiting for apps ready_event.
+Apps ready_event triggered. Sending autoreload_started signal.
+Watching dir /Users/fscliment/Soft/kinetia/K/portfolio/locale with glob **/*.mo.
+Watching dir /Users/fscliment/Soft/kinetia/K/env/lib/python3.5/site-packages/django/contrib/admin/locale with glob **/*.mo.
+Watching dir /Users/fscliment/Soft/kinetia/K/env/lib/python3.5/site-packages/django/contrib/auth/locale with glob **/*.mo.
+Watching dir /Users/fscliment/Soft/kinetia/K/env/lib/python3.5/site-packages/django/contrib/contenttypes/locale with glob **/*.mo.
+Watching dir /Users/fscliment/Soft/kinetia/K/env/lib/python3.5/site-packages/django/contrib/sessions/locale with glob **/*.mo.
+Watching dir /Users/fscliment/Soft/kinetia/K/env/lib/python3.5/site-packages/django/contrib/messages/locale with glob **/*.mo.
+Watching dir /Users/fscliment/Soft/kinetia/K/env/lib/python3.5/site-packages/django/contrib/staticfiles/locale with glob **/*.mo.
+Watching dir /Users/fscliment/Soft/kinetia/K/env/lib/python3.5/site-packages/jquery/locale with glob **/*.mo.
+Watching dir /Users/fscliment/Soft/kinetia/K/portfolio/app_portfolio/locale with glob **/*.mo.
+Watching dir /Users/fscliment/Soft/kinetia/K/portfolio/blog/locale with glob **/*.mo.
+Watching for file changes with StatReloader
+Waiting for apps ready_event.
+Apps ready_event triggered. Sending autoreload_started signal.
+Watching dir /Users/fscliment/Soft/kinetia/K/portfolio/locale with glob **/*.mo.
+Watching dir /Users/fscliment/Soft/kinetia/K/env/lib/python3.5/site-packages/django/contrib/admin/locale with glob **/*.mo.
+Watching dir /Users/fscliment/Soft/kinetia/K/env/lib/python3.5/site-packages/django/contrib/auth/locale with glob **/*.mo.
+Watching dir /Users/fscliment/Soft/kinetia/K/env/lib/python3.5/site-packages/django/contrib/contenttypes/locale with glob **/*.mo.
+Watching dir /Users/fscliment/Soft/kinetia/K/env/lib/python3.5/site-packages/django/contrib/sessions/locale with glob **/*.mo.
+Watching dir /Users/fscliment/Soft/kinetia/K/env/lib/python3.5/site-packages/django/contrib/messages/locale with glob **/*.mo.
+Watching dir /Users/fscliment/Soft/kinetia/K/env/lib/python3.5/site-packages/django/contrib/staticfiles/locale with glob **/*.mo.
+Watching dir /Users/fscliment/Soft/kinetia/K/env/lib/python3.5/site-packages/jquery/locale with glob **/*.mo.
+Watching dir /Users/fscliment/Soft/kinetia/K/portfolio/app_portfolio/locale with glob **/*.mo.
+Watching dir /Users/fscliment/Soft/kinetia/K/portfolio/blog/locale with glob **/*.mo.
+(0.036) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.051) SELECT "app_portfolio_perfil"."id", "app_portfolio_perfil"."autor", "app_portfolio_perfil"."nombre", "app_portfolio_perfil"."direccion", "app_portfolio_perfil"."telefono", "app_portfolio_perfil"."email", "app_portfolio_perfil"."webpage", "app_portfolio_perfil"."puesto", "app_portfolio_perfil"."imagen", "app_portfolio_perfil"."cv", "app_portfolio_perfil"."fecha_nacimiento" FROM "app_portfolio_perfil" ORDER BY "app_portfolio_perfil"."id" ASC  LIMIT 1; args=()
+(0.030) SELECT "app_portfolio_proyecto"."id", "app_portfolio_proyecto"."titulo", "app_portfolio_proyecto"."descripcion", "app_portfolio_proyecto"."tags", "app_portfolio_proyecto"."url", "app_portfolio_proyecto"."imagen", "app_portfolio_proyecto"."empresa", "app_portfolio_proyecto"."in_catalog" FROM "app_portfolio_proyecto"; args=()
+(0.026) SELECT "app_portfolio_experiencia"."id", "app_portfolio_experiencia"."nombre", "app_portfolio_experiencia"."porcentaje", "app_portfolio_experiencia"."tipo" FROM "app_portfolio_experiencia" WHERE "app_portfolio_experiencia"."tipo" = '1'  LIMIT 21; args=('1',)
+(0.000) SELECT "app_portfolio_referencia"."id", "app_portfolio_referencia"."nombre", "app_portfolio_referencia"."puesto", "app_portfolio_referencia"."empresa", "app_portfolio_referencia"."comentario", "app_portfolio_referencia"."imagen" FROM "app_portfolio_referencia"  LIMIT 21; args=()
+(0.000) SELECT "app_portfolio_experiencia"."id", "app_portfolio_experiencia"."nombre", "app_portfolio_experiencia"."porcentaje", "app_portfolio_experiencia"."tipo" FROM "app_portfolio_experiencia" WHERE "app_portfolio_experiencia"."tipo" = '2'  LIMIT 21; args=('2',)
+(0.000) SELECT "app_portfolio_reconocimiento"."id", "app_portfolio_reconocimiento"."titulo", "app_portfolio_reconocimiento"."descripcion" FROM "app_portfolio_reconocimiento"  LIMIT 21; args=()
+Exception while resolving variable 'is_mobile' in template 'portfolio.html'.
+Traceback (most recent call last):
+  File "/Users/fscliment/Soft/kinetia/K/env/lib/python3.5/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/Users/fscliment/Soft/kinetia/K/env/lib/python3.5/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_mobile'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/fscliment/Soft/kinetia/K/env/lib/python3.5/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_mobile'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/fscliment/Soft/kinetia/K/env/lib/python3.5/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_mobile'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/fscliment/Soft/kinetia/K/env/lib/python3.5/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_mobile] in [{'True': True, 'False': False, 'None': None}, {'request': <WSGIRequest: GET '/'>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x10db25f28>>, 'DEFAULT_MESSAGE_LEVELS': {'WARNING': 30, 'INFO': 20, 'SUCCESS': 25, 'ERROR': 40, 'DEBUG': 10}, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x10db72390>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x10db0d278>, 'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x10db52730>>}, {}, {'habilidades': <QuerySet [<Experiencia: Análisis Modal Experimental>, <Experiencia: Análisis de Formas Modales en Operación (ODS)>, <Experiencia: Medida de Vibraciones Torsionales>, <Experiencia: Análisis Modal sobre Modelos Numéricos (FEM)>, <Experiencia: Medidas de Ruido Radiado>, <Experiencia: Intensimetría Acústica>]>, 'referencias': <QuerySet [<Referencia: Carlos Calisalvo>, <Referencia: F X Magrans>, <Referencia: Oriol Gibert>]>, 'conocimientos': <QuerySet []>, 'perfil': <Perfil: KINETIA>, 'proyectos': <QuerySet [<Proyecto: Solución a problema de roturas en Ducto de una planta de Fosfatos>, <Proyecto: Validación dinámica de la Turbina Eólica ALSTOM Haliade 160>, <Proyecto: Modelo de Elementos Finitos de bomba vertical de 1MW Sulzer para la planta de Carlsbad.>, <Proyecto: Estudio de Respuesta Sísmica de Armario de Transformadores>, <Proyecto: Análisis de Vibración de Bombas de Agua de Mar>, <Proyecto: Análisis Modal de la bancada de ensayos del generador Haliade 160>, <Proyecto: Altos niveles de Vibración en la Reductora de una Extrusora >, <Proyecto: Definición de Ensayo de durabilidad en Mesa Vibrante para Radiadores Ordóñez>, <Proyecto: Diseño Dinámico y Cálculo Sísmico de la Bomba Vertical SULZER TR350>, <Proyecto: Análisis Dinámico de dos Bombas Verticales de Circulación>, <Proyecto: Altos Niveles de Vibración en bombas Horizontales de HTF>, <Proyecto: Análisis de Niveles de Vibración en Vivienda Provocados por la Actividad de una Planta>, <Proyecto: Análisis de Vibración en una Bomba Horizontal>, <Proyecto: Análisis de Vibraciones y Diagnóstico de una turbina de Vapor>, <Proyecto: Análisis y Diagnóstico de Vibraciones en un Compresor>]>, 'reconocimientos': <QuerySet [<Reconocimiento: Marketing Excellence Awards 2017>, <Reconocimiento: The "Big Idea" competition 2017>, <Reconocimiento: Water seven art directors club awards 2016>, <Reconocimiento: Building Better Python Tools Hackathon>]>}]
+(0.000) SELECT "app_portfolio_experiencia"."id", "app_portfolio_experiencia"."nombre", "app_portfolio_experiencia"."porcentaje", "app_portfolio_experiencia"."tipo" FROM "app_portfolio_experiencia" WHERE "app_portfolio_experiencia"."tipo" = '1'; args=('1',)
+(0.000) SELECT "app_portfolio_experiencia"."id", "app_portfolio_experiencia"."nombre", "app_portfolio_experiencia"."porcentaje", "app_portfolio_experiencia"."tipo" FROM "app_portfolio_experiencia" WHERE "app_portfolio_experiencia"."tipo" = '2'; args=('2',)
+(0.000) SELECT "app_portfolio_referencia"."id", "app_portfolio_referencia"."nombre", "app_portfolio_referencia"."puesto", "app_portfolio_referencia"."empresa", "app_portfolio_referencia"."comentario", "app_portfolio_referencia"."imagen" FROM "app_portfolio_referencia"; args=()
+"GET / HTTP/1.1" 200 76627
+"GET /static/assets/css/flexslider.css HTTP/1.1" 200 6865
+"GET /static/assets/css/magnific-popup.css HTTP/1.1" 200 7241
+"GET /static/assets/css/font-awesome.min.css HTTP/1.1" 200 31023
+"GET /static/assets/css/style.css HTTP/1.1" 200 6077
+"GET /static/assets/css/icons-mind.css HTTP/1.1" 200 96629
+"GET /static/assets/css/theme.min.css HTTP/1.1" 200 37768
+"GET /static/assets/css/main.css HTTP/1.1" 200 449
+"GET /static/assets/css/switch_style.css HTTP/1.1" 200 2086
+"GET /static/assets/css/bootstrap.min.css HTTP/1.1" 200 144877
+"GET /static/assets/css/color.css HTTP/1.1" 200 757
+"GET /static/assets/js/jquery.sticky.js HTTP/1.1" 200 10085
+"GET /static/assets/js/jquery.easing.min.js HTTP/1.1" 200 5564
+"GET /static/assets/js/pace.min.js HTTP/1.1" 200 12552
+"GET /static/assets/js/bootstrap.min.js HTTP/1.1" 200 48944
+"GET /static/assets/js/popper.min.js HTTP/1.1" 200 19236
+"GET /static/assets/js/jquery.min.js HTTP/1.1" 200 86927
+"GET /static/assets/js/jquery.inview.min.js HTTP/1.1" 200 1438
+"GET /static/assets/js/jquery.flexslider.min.js HTTP/1.1" 200 22732
+"GET /static/assets/js/jquery.magnific-popup.min.js HTTP/1.1" 200 20216
+"GET /static/assets/js/jquery.countTo.js HTTP/1.1" 200 3761
+"GET /static/assets/js/imagesloaded.pkgd.min.js HTTP/1.1" 200 5594
+"GET /static/assets/js/jquery.matchHeight.min.js HTTP/1.1" 200 3380
+"GET /static/assets/js/theme.js HTTP/1.1" 200 12870
+"GET /static/assets/js/jquery.validate.min.js HTTP/1.1" 200 23070
+"GET /static/assets/js/switch_style.js HTTP/1.1" 200 718
+"GET /static/assets/images/favi_small.jpg HTTP/1.1" 200 10723
+"GET /media/proyectos_imagenes/hadera_rojo_k.png HTTP/1.1" 200 39870
+"GET /static/assets/images/Kinetia_InPixio_grande_dif.png HTTP/1.1" 200 294982
+"GET /media/proyectos_imagenes/frfs_rojo_k.png HTTP/1.1" 200 187137
+"GET /media/proyectos_imagenes/bomba_rojo_k.png HTTP/1.1" 200 62675
+"GET /media/perfil_imagenes/profile-picture-2.jpg HTTP/1.1" 200 76819
+"GET /media/proyectos_imagenes/wfall_rojo_k_peq.png HTTP/1.1" 200 191803
+"GET /media/referencias_imagenes/calisalvo_intecsa.jpg HTTP/1.1" 200 16034
+"GET /media/referencias_imagenes/Magrans_ICR.jpg HTTP/1.1" 200 6492
+"GET /media/proyectos_imagenes/campbell_rojo_k.png HTTP/1.1" 200 189777
+"GET /static/assets/images/kinetia_logo_oepm.jpg HTTP/1.1" 200 9315
+"GET /media/referencias_imagenes/Gibert_GE.jpg HTTP/1.1" 200 197559
+"GET /static/assets/fonts/fontawesome-webfont3e6e.html?v=4.7.0 HTTP/1.1" 200 77160
+"GET /static/assets/fonts/icons-mind/icomoonca27.woff?-rdmvgc HTTP/1.1" 200 14204
+"GET /media/proyectos_imagenes/intecsa.png HTTP/1.1" 200 1481153
+"GET /static/assets/images/bg-home-1.jpg HTTP/1.1" 200 4715107
+"GET /static/assets/images/favi.jpg HTTP/1.1" 200 10723
+"GET /blog HTTP/1.1" 301 0
+(0.023) SELECT "app_portfolio_proyecto"."id", "app_portfolio_proyecto"."titulo", "app_portfolio_proyecto"."descripcion", "app_portfolio_proyecto"."tags", "app_portfolio_proyecto"."url", "app_portfolio_proyecto"."imagen", "app_portfolio_proyecto"."empresa", "app_portfolio_proyecto"."in_catalog" FROM "app_portfolio_proyecto" ORDER BY "app_portfolio_proyecto"."titulo" ASC; args=()
+(0.000) SELECT "app_portfolio_blog"."id", "app_portfolio_blog"."lema", "app_portfolio_blog"."imagen", "app_portfolio_blog"."imagen_mobile" FROM "app_portfolio_blog"  LIMIT 21; args=()
+Exception while resolving variable 'is_mobile' in template 'post_list.html'.
+Traceback (most recent call last):
+  File "/Users/fscliment/Soft/kinetia/K/env/lib/python3.5/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/Users/fscliment/Soft/kinetia/K/env/lib/python3.5/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_mobile'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/fscliment/Soft/kinetia/K/env/lib/python3.5/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_mobile'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/fscliment/Soft/kinetia/K/env/lib/python3.5/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_mobile'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/fscliment/Soft/kinetia/K/env/lib/python3.5/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_mobile] in [{'True': True, 'False': False, 'None': None}, {'request': <WSGIRequest: GET '/blog/'>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x10db482f0>>, 'DEFAULT_MESSAGE_LEVELS': {'WARNING': 30, 'INFO': 20, 'SUCCESS': 25, 'ERROR': 40, 'DEBUG': 10}, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x10d9a3978>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x10db6aa58>, 'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x10db48840>>}, {}, {'posts': <QuerySet [<Proyecto: Altos Niveles de Vibración en bombas Horizontales de HTF>, <Proyecto: Altos niveles de Vibración en la Reductora de una Extrusora >, <Proyecto: Análisis Dinámico de dos Bombas Verticales de Circulación>, <Proyecto: Análisis Modal de la bancada de ensayos del generador Haliade 160>, <Proyecto: Análisis de Niveles de Vibración en Vivienda Provocados por la Actividad de una Planta>, <Proyecto: Análisis de Vibraciones y Diagnóstico de una turbina de Vapor>, <Proyecto: Análisis de Vibración de Bombas de Agua de Mar>, <Proyecto: Análisis de Vibración en una Bomba Horizontal>, <Proyecto: Análisis y Diagnóstico de Vibraciones en un Compresor>, <Proyecto: Definición de Ensayo de durabilidad en Mesa Vibrante para Radiadores Ordóñez>, <Proyecto: Diseño Dinámico y Cálculo Sísmico de la Bomba Vertical SULZER TR350>, <Proyecto: Estudio de Respuesta Sísmica de Armario de Transformadores>, <Proyecto: Modelo de Elementos Finitos de bomba vertical de 1MW Sulzer para la planta de Carlsbad.>, <Proyecto: Solución a problema de roturas en Ducto de una planta de Fosfatos>, <Proyecto: Validación dinámica de la Turbina Eólica ALSTOM Haliade 160>]>, 'blog_files': <QuerySet [<Blog: default>]>}]
+(0.000) SELECT "app_portfolio_blog"."id", "app_portfolio_blog"."lema", "app_portfolio_blog"."imagen", "app_portfolio_blog"."imagen_mobile" FROM "app_portfolio_blog"; args=()
+"GET /blog/ HTTP/1.1" 200 276681
+"GET /media/proyectos_imagenes/favi_trans_small.png HTTP/1.1" 200 22758
+"GET /static/assets/css/style3.css HTTP/1.1" 200 3340
+"GET /static/assets/images/kinetia_blog.png HTTP/1.1" 200 91089
+"GET /static/assets/js/popper.min.js.map HTTP/1.1" 404 1705
+"GET /static/assets/css/bootstrap.min.css.map HTTP/1.1" 404 1720
+"GET /static/assets/js/bootstrap.min.js.map HTTP/1.1" 404 1714
+(0.058) SELECT "app_portfolio_proyecto"."id", "app_portfolio_proyecto"."titulo", "app_portfolio_proyecto"."descripcion", "app_portfolio_proyecto"."tags", "app_portfolio_proyecto"."url", "app_portfolio_proyecto"."imagen", "app_portfolio_proyecto"."empresa", "app_portfolio_proyecto"."in_catalog" FROM "app_portfolio_proyecto" ORDER BY "app_portfolio_proyecto"."titulo" ASC; args=()
+(0.000) SELECT "app_portfolio_blog"."id", "app_portfolio_blog"."lema", "app_portfolio_blog"."imagen", "app_portfolio_blog"."imagen_mobile" FROM "app_portfolio_blog"  LIMIT 21; args=()
+Exception while resolving variable 'is_mobile' in template 'post_list.html'.
+Traceback (most recent call last):
+  File "/Users/fscliment/Soft/kinetia/K/env/lib/python3.5/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/Users/fscliment/Soft/kinetia/K/env/lib/python3.5/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_mobile'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/fscliment/Soft/kinetia/K/env/lib/python3.5/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_mobile'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/fscliment/Soft/kinetia/K/env/lib/python3.5/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_mobile'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/fscliment/Soft/kinetia/K/env/lib/python3.5/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_mobile] in [{'True': True, 'False': False, 'None': None}, {'request': <WSGIRequest: GET '/blog/'>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x10db52048>>, 'DEFAULT_MESSAGE_LEVELS': {'WARNING': 30, 'INFO': 20, 'SUCCESS': 25, 'ERROR': 40, 'DEBUG': 10}, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x10d9a3a58>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x10d9a3b00>, 'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x10db36c80>>}, {}, {'posts': <QuerySet [<Proyecto: Altos Niveles de Vibración en bombas Horizontales de HTF>, <Proyecto: Altos niveles de Vibración en la Reductora de una Extrusora >, <Proyecto: Análisis Dinámico de dos Bombas Verticales de Circulación>, <Proyecto: Análisis Modal de la bancada de ensayos del generador Haliade 160>, <Proyecto: Análisis de Niveles de Vibración en Vivienda Provocados por la Actividad de una Planta>, <Proyecto: Análisis de Vibraciones y Diagnóstico de una turbina de Vapor>, <Proyecto: Análisis de Vibración de Bombas de Agua de Mar>, <Proyecto: Análisis de Vibración en una Bomba Horizontal>, <Proyecto: Análisis y Diagnóstico de Vibraciones en un Compresor>, <Proyecto: Definición de Ensayo de durabilidad en Mesa Vibrante para Radiadores Ordóñez>, <Proyecto: Diseño Dinámico y Cálculo Sísmico de la Bomba Vertical SULZER TR350>, <Proyecto: Estudio de Respuesta Sísmica de Armario de Transformadores>, <Proyecto: Modelo de Elementos Finitos de bomba vertical de 1MW Sulzer para la planta de Carlsbad.>, <Proyecto: Solución a problema de roturas en Ducto de una planta de Fosfatos>, <Proyecto: Validación dinámica de la Turbina Eólica ALSTOM Haliade 160>]>, 'blog_files': <QuerySet [<Blog: default>]>}]
+(0.000) SELECT "app_portfolio_blog"."id", "app_portfolio_blog"."lema", "app_portfolio_blog"."imagen", "app_portfolio_blog"."imagen_mobile" FROM "app_portfolio_blog"; args=()
+"GET /blog/ HTTP/1.1" 200 276681
+"GET /static/assets/img/icon-zoom-out-white.png HTTP/1.1" 200 3236
+"GET /static/assets/img/icon-arrow-left-white.png HTTP/1.1" 200 1209
+"GET /static/assets/img/icon-arrow-right-white.png HTTP/1.1" 200 1207
+(0.002) SELECT "app_portfolio_proyecto"."id", "app_portfolio_proyecto"."titulo", "app_portfolio_proyecto"."descripcion", "app_portfolio_proyecto"."tags", "app_portfolio_proyecto"."url", "app_portfolio_proyecto"."imagen", "app_portfolio_proyecto"."empresa", "app_portfolio_proyecto"."in_catalog" FROM "app_portfolio_proyecto" ORDER BY "app_portfolio_proyecto"."titulo" ASC; args=()
+(0.000) SELECT "app_portfolio_blog"."id", "app_portfolio_blog"."lema", "app_portfolio_blog"."imagen", "app_portfolio_blog"."imagen_mobile" FROM "app_portfolio_blog"  LIMIT 21; args=()
+Exception while resolving variable 'is_mobile' in template 'post_list.html'.
+Traceback (most recent call last):
+  File "/Users/fscliment/Soft/kinetia/K/env/lib/python3.5/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/Users/fscliment/Soft/kinetia/K/env/lib/python3.5/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_mobile'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/fscliment/Soft/kinetia/K/env/lib/python3.5/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_mobile'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/fscliment/Soft/kinetia/K/env/lib/python3.5/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_mobile'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/fscliment/Soft/kinetia/K/env/lib/python3.5/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_mobile] in [{'True': True, 'False': False, 'None': None}, {'request': <WSGIRequest: GET '/blog/'>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x10dbef510>>, 'DEFAULT_MESSAGE_LEVELS': {'WARNING': 30, 'INFO': 20, 'SUCCESS': 25, 'ERROR': 40, 'DEBUG': 10}, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x10db6c240>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x10db6cba8>, 'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x10dbef048>>}, {}, {'posts': <QuerySet [<Proyecto: Altos Niveles de Vibración en bombas Horizontales de HTF>, <Proyecto: Altos niveles de Vibración en la Reductora de una Extrusora >, <Proyecto: Análisis Dinámico de dos Bombas Verticales de Circulación>, <Proyecto: Análisis Modal de la bancada de ensayos del generador Haliade 160>, <Proyecto: Análisis de Niveles de Vibración en Vivienda Provocados por la Actividad de una Planta>, <Proyecto: Análisis de Vibraciones y Diagnóstico de una turbina de Vapor>, <Proyecto: Análisis de Vibración de Bombas de Agua de Mar>, <Proyecto: Análisis de Vibración en una Bomba Horizontal>, <Proyecto: Análisis y Diagnóstico de Vibraciones en un Compresor>, <Proyecto: Definición de Ensayo de durabilidad en Mesa Vibrante para Radiadores Ordóñez>, <Proyecto: Diseño Dinámico y Cálculo Sísmico de la Bomba Vertical SULZER TR350>, <Proyecto: Estudio de Respuesta Sísmica de Armario de Transformadores>, <Proyecto: Modelo de Elementos Finitos de bomba vertical de 1MW Sulzer para la planta de Carlsbad.>, <Proyecto: Solución a problema de roturas en Ducto de una planta de Fosfatos>, <Proyecto: Validación dinámica de la Turbina Eólica ALSTOM Haliade 160>]>, 'blog_files': <QuerySet [<Blog: default>]>}]
+(0.000) SELECT "app_portfolio_blog"."id", "app_portfolio_blog"."lema", "app_portfolio_blog"."imagen", "app_portfolio_blog"."imagen_mobile" FROM "app_portfolio_blog"; args=()
+"GET /blog/ HTTP/1.1" 200 276681
+(0.025) SELECT "app_portfolio_perfil"."id", "app_portfolio_perfil"."autor", "app_portfolio_perfil"."nombre", "app_portfolio_perfil"."direccion", "app_portfolio_perfil"."telefono", "app_portfolio_perfil"."email", "app_portfolio_perfil"."webpage", "app_portfolio_perfil"."puesto", "app_portfolio_perfil"."imagen", "app_portfolio_perfil"."cv", "app_portfolio_perfil"."fecha_nacimiento" FROM "app_portfolio_perfil" ORDER BY "app_portfolio_perfil"."id" ASC  LIMIT 1; args=()
+(0.001) SELECT "app_portfolio_proyecto"."id", "app_portfolio_proyecto"."titulo", "app_portfolio_proyecto"."descripcion", "app_portfolio_proyecto"."tags", "app_portfolio_proyecto"."url", "app_portfolio_proyecto"."imagen", "app_portfolio_proyecto"."empresa", "app_portfolio_proyecto"."in_catalog" FROM "app_portfolio_proyecto"; args=()
+(0.000) SELECT "app_portfolio_experiencia"."id", "app_portfolio_experiencia"."nombre", "app_portfolio_experiencia"."porcentaje", "app_portfolio_experiencia"."tipo" FROM "app_portfolio_experiencia" WHERE "app_portfolio_experiencia"."tipo" = '1'  LIMIT 21; args=('1',)
+(0.000) SELECT "app_portfolio_referencia"."id", "app_portfolio_referencia"."nombre", "app_portfolio_referencia"."puesto", "app_portfolio_referencia"."empresa", "app_portfolio_referencia"."comentario", "app_portfolio_referencia"."imagen" FROM "app_portfolio_referencia"  LIMIT 21; args=()
+(0.000) SELECT "app_portfolio_experiencia"."id", "app_portfolio_experiencia"."nombre", "app_portfolio_experiencia"."porcentaje", "app_portfolio_experiencia"."tipo" FROM "app_portfolio_experiencia" WHERE "app_portfolio_experiencia"."tipo" = '2'  LIMIT 21; args=('2',)
+(0.000) SELECT "app_portfolio_reconocimiento"."id", "app_portfolio_reconocimiento"."titulo", "app_portfolio_reconocimiento"."descripcion" FROM "app_portfolio_reconocimiento"  LIMIT 21; args=()
+Exception while resolving variable 'is_mobile' in template 'portfolio.html'.
+Traceback (most recent call last):
+  File "/Users/fscliment/Soft/kinetia/K/env/lib/python3.5/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/Users/fscliment/Soft/kinetia/K/env/lib/python3.5/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_mobile'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/fscliment/Soft/kinetia/K/env/lib/python3.5/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_mobile'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/fscliment/Soft/kinetia/K/env/lib/python3.5/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_mobile'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/fscliment/Soft/kinetia/K/env/lib/python3.5/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_mobile] in [{'True': True, 'False': False, 'None': None}, {'request': <WSGIRequest: GET '/'>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x10db27c80>>, 'DEFAULT_MESSAGE_LEVELS': {'WARNING': 30, 'INFO': 20, 'SUCCESS': 25, 'ERROR': 40, 'DEBUG': 10}, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x10db57668>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x10d981d68>, 'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x10d418620>>}, {}, {'habilidades': <QuerySet [<Experiencia: Análisis Modal Experimental>, <Experiencia: Análisis de Formas Modales en Operación (ODS)>, <Experiencia: Medida de Vibraciones Torsionales>, <Experiencia: Análisis Modal sobre Modelos Numéricos (FEM)>, <Experiencia: Medidas de Ruido Radiado>, <Experiencia: Intensimetría Acústica>]>, 'referencias': <QuerySet [<Referencia: Carlos Calisalvo>, <Referencia: F X Magrans>, <Referencia: Oriol Gibert>]>, 'conocimientos': <QuerySet []>, 'perfil': <Perfil: KINETIA>, 'proyectos': <QuerySet [<Proyecto: Solución a problema de roturas en Ducto de una planta de Fosfatos>, <Proyecto: Validación dinámica de la Turbina Eólica ALSTOM Haliade 160>, <Proyecto: Modelo de Elementos Finitos de bomba vertical de 1MW Sulzer para la planta de Carlsbad.>, <Proyecto: Estudio de Respuesta Sísmica de Armario de Transformadores>, <Proyecto: Análisis de Vibración de Bombas de Agua de Mar>, <Proyecto: Análisis Modal de la bancada de ensayos del generador Haliade 160>, <Proyecto: Altos niveles de Vibración en la Reductora de una Extrusora >, <Proyecto: Definición de Ensayo de durabilidad en Mesa Vibrante para Radiadores Ordóñez>, <Proyecto: Diseño Dinámico y Cálculo Sísmico de la Bomba Vertical SULZER TR350>, <Proyecto: Análisis Dinámico de dos Bombas Verticales de Circulación>, <Proyecto: Altos Niveles de Vibración en bombas Horizontales de HTF>, <Proyecto: Análisis de Niveles de Vibración en Vivienda Provocados por la Actividad de una Planta>, <Proyecto: Análisis de Vibración en una Bomba Horizontal>, <Proyecto: Análisis de Vibraciones y Diagnóstico de una turbina de Vapor>, <Proyecto: Análisis y Diagnóstico de Vibraciones en un Compresor>]>, 'reconocimientos': <QuerySet [<Reconocimiento: Marketing Excellence Awards 2017>, <Reconocimiento: The "Big Idea" competition 2017>, <Reconocimiento: Water seven art directors club awards 2016>, <Reconocimiento: Building Better Python Tools Hackathon>]>}]
+(0.000) SELECT "app_portfolio_experiencia"."id", "app_portfolio_experiencia"."nombre", "app_portfolio_experiencia"."porcentaje", "app_portfolio_experiencia"."tipo" FROM "app_portfolio_experiencia" WHERE "app_portfolio_experiencia"."tipo" = '1'; args=('1',)
+(0.000) SELECT "app_portfolio_experiencia"."id", "app_portfolio_experiencia"."nombre", "app_portfolio_experiencia"."porcentaje", "app_portfolio_experiencia"."tipo" FROM "app_portfolio_experiencia" WHERE "app_portfolio_experiencia"."tipo" = '2'; args=('2',)
+(0.000) SELECT "app_portfolio_referencia"."id", "app_portfolio_referencia"."nombre", "app_portfolio_referencia"."puesto", "app_portfolio_referencia"."empresa", "app_portfolio_referencia"."comentario", "app_portfolio_referencia"."imagen" FROM "app_portfolio_referencia"; args=()
+"GET / HTTP/1.1" 200 76757
+"GET /static/assets/images/favi.jpg HTTP/1.1" 200 10723
+(0.001) SELECT "app_portfolio_proyecto"."id", "app_portfolio_proyecto"."titulo", "app_portfolio_proyecto"."descripcion", "app_portfolio_proyecto"."tags", "app_portfolio_proyecto"."url", "app_portfolio_proyecto"."imagen", "app_portfolio_proyecto"."empresa", "app_portfolio_proyecto"."in_catalog" FROM "app_portfolio_proyecto" ORDER BY "app_portfolio_proyecto"."titulo" ASC; args=()
+(0.000) SELECT "app_portfolio_blog"."id", "app_portfolio_blog"."lema", "app_portfolio_blog"."imagen", "app_portfolio_blog"."imagen_mobile" FROM "app_portfolio_blog"  LIMIT 21; args=()
+Exception while resolving variable 'is_mobile' in template 'post_list.html'.
+Traceback (most recent call last):
+  File "/Users/fscliment/Soft/kinetia/K/env/lib/python3.5/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/Users/fscliment/Soft/kinetia/K/env/lib/python3.5/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_mobile'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/fscliment/Soft/kinetia/K/env/lib/python3.5/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_mobile'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/fscliment/Soft/kinetia/K/env/lib/python3.5/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_mobile'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/fscliment/Soft/kinetia/K/env/lib/python3.5/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_mobile] in [{'True': True, 'False': False, 'None': None}, {'request': <WSGIRequest: GET '/blog/'>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x10d418620>>, 'DEFAULT_MESSAGE_LEVELS': {'WARNING': 30, 'INFO': 20, 'SUCCESS': 25, 'ERROR': 40, 'DEBUG': 10}, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x10db72780>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x10d9a3d30>, 'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x10db36f28>>}, {}, {'posts': <QuerySet [<Proyecto: Altos Niveles de Vibración en bombas Horizontales de HTF>, <Proyecto: Altos niveles de Vibración en la Reductora de una Extrusora >, <Proyecto: Análisis Dinámico de dos Bombas Verticales de Circulación>, <Proyecto: Análisis Modal de la bancada de ensayos del generador Haliade 160>, <Proyecto: Análisis de Niveles de Vibración en Vivienda Provocados por la Actividad de una Planta>, <Proyecto: Análisis de Vibraciones y Diagnóstico de una turbina de Vapor>, <Proyecto: Análisis de Vibración de Bombas de Agua de Mar>, <Proyecto: Análisis de Vibración en una Bomba Horizontal>, <Proyecto: Análisis y Diagnóstico de Vibraciones en un Compresor>, <Proyecto: Definición de Ensayo de durabilidad en Mesa Vibrante para Radiadores Ordóñez>, <Proyecto: Diseño Dinámico y Cálculo Sísmico de la Bomba Vertical SULZER TR350>, <Proyecto: Estudio de Respuesta Sísmica de Armario de Transformadores>, <Proyecto: Modelo de Elementos Finitos de bomba vertical de 1MW Sulzer para la planta de Carlsbad.>, <Proyecto: Solución a problema de roturas en Ducto de una planta de Fosfatos>, <Proyecto: Validación dinámica de la Turbina Eólica ALSTOM Haliade 160>]>, 'blog_files': <QuerySet [<Blog: default>]>}]
+(0.000) SELECT "app_portfolio_blog"."id", "app_portfolio_blog"."lema", "app_portfolio_blog"."imagen", "app_portfolio_blog"."imagen_mobile" FROM "app_portfolio_blog"; args=()
+"GET /blog/ HTTP/1.1" 200 276681
